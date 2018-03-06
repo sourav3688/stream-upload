@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>Stream Upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/js/chunk-upload.js"></script>
+    <script>
+        $(function () {
+            $('#upload').click(function () {
+                var file = $('#uploadfile')[0].files[0];
+                var apiPostUrl = "http://localhost:3000/upload";
+                uploadFile(file, apiPostUrl);
+            });            
+        });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+        <h1 class="text-center" style="color: #fff;">Welcome to chunk upload or stream upload sample!!</h1>
+    </nav>
+
+    <div class="container">
+
+        <div class="starter-template">
+            <h1>Select a file</h1>
+            <form name="fileUpload" class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="file" name="uploadfile" id="uploadfile">
+                </div>
+                <button type="button" id="upload" class="btn btn-primary mb-2">Start Upload</button>
+            </form>
+            <P id="filesize" style="display: none;"></P>
+            <div class="progress">
+                <div id="progressbar" class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                    0% Complete
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

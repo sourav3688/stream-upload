@@ -1,0 +1,16 @@
+{
+  "name": "onmiseq",
+  "version": "1.0.0",
+  "description": "OmniSeq",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Sourav Das",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "method-override": "^2.3.9"
+  }
+}
